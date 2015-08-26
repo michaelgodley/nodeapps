@@ -1,0 +1,40 @@
+<!-- views/signup.ejs -->
+<!doctype html>
+<html>
+<head>
+    <title>Email Prog</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <style>
+        body        { padding-top:80px; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+<div class="col-sm-6 col-sm-offset-3">
+    <h1><span class="fa fa-sign-in"></span> E-mail</h1>
+
+    <!-- Show any messages from previous flash -->
+    <% if(message.length>0) { %>
+        <div class="alert alert-danger"><%= message%></div>
+    <% } %>
+
+    <!-- EMAIL FORM -->
+    <form action="/sample/email" method="post">
+        <div class="form-group">
+            <label>Email</label>
+            <input type="text" class="form-control" name="email">
+        </div>
+        <div class="form-group">
+            <label>Prog ID</label>
+            <input type="text" class="form-control" name="progId">
+        </div>
+
+        <button type="submit" class="btn btn-warning btn-lg">Email</button>
+    </form>
+</div>
+
+</div>
+</body>
+</html>
